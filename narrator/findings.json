@@ -1,0 +1,150 @@
+{
+  "data": {
+    "source_files": [
+      "data/customers.csv",
+      "data/products.csv",
+      "data/orders.csv"
+    ],
+    "raw_orders": 180,
+    "clean_orders": 175,
+    "duplicates_removed": 5,
+    "customers": 44,
+    "products": 16,
+    "period": {
+      "from": "2026-01-02",
+      "to": "2026-06-29"
+    }
+  },
+  "revenue": {
+    "raw_total_inr": 99860.2,
+    "clean_total_inr": 97358.3,
+    "duplicate_delta_inr": 2501.9,
+    "avg_order_value_inr": 556.33
+  },
+  "returns": {
+    "overall_rate_pct": 25.14,
+    "returned_orders": 44,
+    "by_payment_method": {
+      "CARD": {
+        "orders": 68,
+        "return_rate_pct": 14.71
+      },
+      "COD": {
+        "orders": 54,
+        "return_rate_pct": 44.44
+      },
+      "UPI": {
+        "orders": 53,
+        "return_rate_pct": 18.87
+      }
+    },
+    "by_category": {
+      "Babycare": {
+        "orders": 29,
+        "return_rate_pct": 24.14
+      },
+      "Haircare": {
+        "orders": 53,
+        "return_rate_pct": 26.42
+      },
+      "PersonalCare": {
+        "orders": 34,
+        "return_rate_pct": 14.71
+      },
+      "Skincare": {
+        "orders": 59,
+        "return_rate_pct": 30.51
+      }
+    },
+    "by_city": {
+      "Bangalore": {
+        "orders": 32,
+        "return_rate_pct": 25.0
+      },
+      "Delhi": {
+        "orders": 23,
+        "return_rate_pct": 17.39
+      },
+      "Jaipur": {
+        "orders": 19,
+        "return_rate_pct": 42.11
+      },
+      "Lucknow": {
+        "orders": 48,
+        "return_rate_pct": 29.17
+      },
+      "Mumbai": {
+        "orders": 53,
+        "return_rate_pct": 18.87
+      }
+    },
+    "by_acquisition_source": {
+      "Ad": {
+        "orders": 50,
+        "return_rate_pct": 32.0
+      },
+      "Organic": {
+        "orders": 61,
+        "return_rate_pct": 18.03
+      },
+      "Referral": {
+        "orders": 29,
+        "return_rate_pct": 24.14
+      },
+      "Social": {
+        "orders": 35,
+        "return_rate_pct": 28.57
+      }
+    },
+    "worst_product_by_revenue_lost": {
+      "product_id": "P11",
+      "product_name": "Milky Soft Baby Lotion",
+      "revenue_lost_inr": 8073.0
+    }
+  },
+  "highest_risk_segment": {
+    "payment_method": "COD",
+    "city_tier": 2,
+    "orders": 22,
+    "return_rate_pct": 54.55
+  },
+  "outliers": {
+    "method": "IQR (1.5x)",
+    "q1": 1.0,
+    "q3": 2.0,
+    "upper_fence": 3.5,
+    "flagged_rows": 2,
+    "order_ids": [
+      "O0011",
+      "O0098"
+    ],
+    "handling": "flagged only, never dropped",
+    "peak_month_all_orders": {
+      "month": "2026-01",
+      "revenue_inr": 29582.1
+    },
+    "peak_month_without_outliers": {
+      "month": "2026-03",
+      "revenue_inr": 20318.9
+    }
+  },
+  "correlations": {
+    "discount_vs_returned": -0.088,
+    "rating_vs_returned": -0.107,
+    "quantity_vs_returned": 0.041,
+    "note": "all correlations are weak (|r| < 0.15) - no single numeric variable explains returns"
+  },
+  "monthly": {
+    "2026-01": 11637.1,
+    "2026-02": 13195.5,
+    "2026-03": 20318.9,
+    "2026-04": 9495.3,
+    "2026-05": 13151.1,
+    "2026-06": 11615.4
+  },
+  "segment_summary": {
+    "low_value_customers": 14,
+    "mid_value_customers": 19,
+    "high_value_customers": 11
+  }
+}
