@@ -120,7 +120,9 @@ def clean(orders, products, customers):
     print("                     full price, which keeps the revenue formula honest")
 
     n_rating = int(orders["rating"].isna().sum())
-    print(f"      rating       : {n_rating} blanks -> LEFT AS NULL (no fill)")
+    median_rating = float(orders["rating"].median())
+    orders["rating"] = orders["rating"].fillna(median_rating)
+    print(f"      rating       : {n_rating} blanks -> filled with median ({median_rating})")
     print("                     reason: a rating is an opinion, not a measurement.")
     print("                     Filling it with a mean would invent an opinion the")
     print("                     customer never gave. Those rows are simply excluded")
@@ -378,3 +380,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

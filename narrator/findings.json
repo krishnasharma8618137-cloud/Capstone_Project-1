@@ -130,7 +130,7 @@
   },
   "correlations": {
     "discount_vs_returned": -0.088,
-    "rating_vs_returned": -0.107,
+    "rating_vs_returned": -0.101,
     "quantity_vs_returned": 0.041,
     "note": "all correlations are weak (|r| < 0.15) - no single numeric variable explains returns"
   },

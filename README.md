@@ -200,3 +200,4 @@ Python 3.9+ is required. Part 1 (SQL) needs no libraries at all — any SQLite c
 ![Monthly Revenue Trend](visualizations/monthly_revenue_trend.png)
 
 
+

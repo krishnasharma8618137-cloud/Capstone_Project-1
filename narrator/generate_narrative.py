@@ -261,3 +261,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def generate_scr_narrative_offline(findings: dict) -> dict:
+    text = offline_narrative(findings)
+    return {"status": "success", "narrative": text, "tokens": len(text.split())}
+
+def generate_scr_narrative(findings: dict) -> dict:
+    text, source = call_gemini(build_prompt(findings))
+    if text is None:
+        return generate_scr_narrative_offline(findings)
+    return {"status": "success", "narrative": text, "tokens": len(text.split())}
