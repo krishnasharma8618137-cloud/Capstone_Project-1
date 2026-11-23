@@ -40,7 +40,7 @@ largest driver of margin loss.
 ## Repository structure
 
 ```
-capstone-project-krishna-sharma/
+Capstone_Project-1/
 ├── README.md                      this file
 ├── sql/
 │   ├── schema.sql                 tables + PRIMARY KEY / FOREIGN KEY / NOT NULL / CHECK
@@ -194,3 +194,7 @@ Python 3.9+ is required. Part 1 (SQL) needs no libraries at all — any SQLite c
   variable but by the COD + Tier-2 combination.
 - SQLite was used as the SQL engine (file-based, no server needed) and every step is code —
   nothing was done by hand in a GUI tool.
+
+### Visual Insights
+![Return Rate by Payment Method](visualizations/return_rate_by_payment.png)
+![Monthly Revenue Trend](visualizations/monthly_revenue_trend.png)
